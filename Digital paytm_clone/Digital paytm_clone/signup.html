@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Fast-Pay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>CREATE AN ACCOUNT</h2>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <input type="text" id="mobile" placeholder="Enter your mobile number" required>
+        <button onclick="sendOTP()">Generate OTP</button>
+        <input type="text" id="otp" placeholder="Enter OTP" required>
+        <button onclick="verifyOTP()">Submit</button>
+        <p>Have an account? <a href="index.html">Login</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

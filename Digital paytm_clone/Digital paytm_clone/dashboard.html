@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Fast-Pay</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <h2>Fast-Pay</h2>
+        <div id="qrcode"></div>
+        <h3>Scan & Pay</h3>
+        <button onclick="alert('Feature Coming Soon!')">Check Bank Balance</button>
+        <button onclick="alert('Feature Coming Soon!')">Transaction History</button>
+    </div>
+    <script>
+        let user = JSON.parse(localStorage.getItem("loggedInUser"));
+        if (!user) {
+            window.location.href = "index.html";
+        } else {
+            new QRCode(document.getElementById("qrcode"), user.mobile);
+        }
+    </script>
+</body>
+</html>
